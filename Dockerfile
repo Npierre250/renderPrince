@@ -9,8 +9,5 @@ FROM openjdk:17.0.1-jdk-slim
 
 COPY --from=build /target/SPRINGBOOT-0.0.1-SNAPSHOT.jar /app/SPRINGBOOT.jar
 
-# Expose the port your application runs on
-EXPOSE 8080
-
 # Command to run your application
 CMD ["java", "-jar", "SPRINGBOOT.jar"]
